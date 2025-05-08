@@ -1,6 +1,6 @@
-# TypeScript Notes
+# Blog Task
 
-## Interface vs Type Alias
+## Interface vs Type Alias in Typescript
 
 -Interface and type alias both of them define object structures, but they have key differences:
 
