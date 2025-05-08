@@ -5,7 +5,7 @@ function formatString(input: string, toUpper?: boolean): string {
     return input.toUpperCase();
   }
 }
-formatString("this");
+formatString("love");
 
 const books = [
   { title: "Book A", rating: 4.5 },
@@ -27,10 +27,7 @@ function filterByRating(
 filterByRating(books);
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
-  const result = arrays.reduce((acc, arr) => {
-    return [...acc, ...arr];
-  }, [] as T[]);
-
+  const result = ([] as T[]).concat(...arrays);
   return result;
 }
 
@@ -65,7 +62,7 @@ function processValue(value: string | number): number {
   }
 }
 
-processValue("hello");
+processValue("bangladesh");
 processValue(10);
 
 interface Product {
