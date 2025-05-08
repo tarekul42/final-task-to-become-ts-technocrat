@@ -5,15 +5,6 @@ function formatString(input: string, toUpper?: boolean): string {
     return input.toUpperCase();
   }
 }
-formatString("love");
-
-const books = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book C", rating: 5.0 },
-  { title: "Book D", rating: 4.0 },
-  { title: "Book e", rating: 9.9 },
-];
 
 function filterByRating(
   items: { title: string; rating: number }[]
@@ -24,15 +15,10 @@ function filterByRating(
   return filteredItems;
 }
 
-filterByRating(books);
-
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result = ([] as T[]).concat(...arrays);
   return result;
 }
-
-concatenateArrays(["a", "b"], ["c"]);
-concatenateArrays([1, 2], [3, 4], [5]);
 
 class Vehicle {
   constructor(private make: string, private year: number) {}
@@ -50,10 +36,6 @@ class Car extends Vehicle {
   }
 }
 
-const myCar = new Car("Toyota", 2020, "Corolla");
-myCar.getInfo();
-myCar.getModel();
-
 function processValue(value: string | number): number {
   if (typeof value === "string") {
     return value.length;
@@ -62,20 +44,10 @@ function processValue(value: string | number): number {
   }
 }
 
-processValue("bangladesh");
-processValue(10);
-
 interface Product {
   name: string;
   price: number;
 }
-
-const products = [
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-  { name: "Bag", price: 50 },
-  { name: "Mouse", price: 850 },
-];
 
 function getMostExpensiveProduct(products: Product[]): Product | null {
   if (!products || products.length === 0) {
@@ -87,7 +59,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     return mostExpensive;
   }
 }
-getMostExpensiveProduct(products);
 
 enum Day {
   Monday,
@@ -115,9 +86,6 @@ function getDayType(day: Day): string {
   }
 }
 
-getDayType(Day.Monday);
-getDayType(Day.Sunday);
-
 async function squareAsync(n: number): Promise<number> {
   if (n < 0) {
     throw "Error: Negative number not allowed";
@@ -127,6 +95,3 @@ async function squareAsync(n: number): Promise<number> {
   });
   return result;
 }
-
-squareAsync(15).then(console.log);
-squareAsync(-1).catch(console.error);
